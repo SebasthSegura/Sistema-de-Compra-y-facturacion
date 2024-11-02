@@ -2,18 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CrediCart {
-    private double limit;
-    private double balance;
-    private List<Shop> shopList;
+    public double limit;
+    public double balance;
+    public List<Shop> shopList;
 
     public CrediCart(double limit){
         this.limit = limit;
-        this.balance = balance;
-        this.shopList = shopList = new ArrayList<>();
+        this.balance = limit;
+        this.shopList = new ArrayList<>();
     }
 
     public boolean deskShopping(Shop shop){
-        if (this.balance > shop.getPrice()){
+        if (this.balance >= shop.getPrice()){
             this.balance -= shop.getPrice();
             this.shopList.add(shop);
             return true;

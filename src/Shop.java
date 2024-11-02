@@ -1,4 +1,4 @@
-public class Shop {
+public class Shop implements Comparable<Shop> {
     private double price;
     private String description;
 
@@ -19,5 +19,10 @@ public class Shop {
     public String toString() {
         return "El valor de Compra: " + price +
                 "Descripcion: " + description;
+    }
+
+    @Override
+    public int compareTo(Shop otherShop) {
+        return Double.valueOf(this.price).compareTo(Double.valueOf(otherShop.getPrice()));
     }
 }
