@@ -51,7 +51,17 @@ public class Main {
         }
         System.out.println("**********************************");
         System.out.println("COMPRAS REALIZADAS: \n");
+
+        /*
+        usamos el Collections.sort para realizar una reorganizacion de
+        los objetos en la lista
+         */
         Collections.sort(crediCard.getShopList());
+
+        /*
+        usamos un forEach para poder recorrer la lista y comparar
+        los valores de la misma
+         */
         for (Shop shop : crediCard.getShopList()){
             System.out.println(shop.getDescription() + " - " + shop.getPrice());
         }
